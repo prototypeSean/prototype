@@ -1,0 +1,31 @@
+{% extends 'proto_demo/base.html' %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% block title %}
+    創造原型
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Start Prototype&nbsp;&nbsp;創造原型</h1>
+        <br>
+    </div>
+
+    {{ form.media }}
+    <form method="post" class="form-horizontal" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form layout="horizontal"%}
+
+
+    {% buttons layout='horizontal'%}
+        <button type="submit" class="btn btn-primary">
+            {% bootstrap_icon "star" %} Submit
+        </button>
+    {% endbuttons %}
+
+</form>
+{# Read the documentation for more information #}
+
+{% endblock %}

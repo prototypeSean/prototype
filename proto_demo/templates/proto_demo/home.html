@@ -1,0 +1,245 @@
+{% extends 'proto_demo/base.html' %}
+{% load bootstrap3 %}
+{% load staticfiles %}
+
+{# 繼承的block不要把他呼叫出來才不會被覆蓋  #}
+{{% block title %}
+    Prototype
+{% endblock %}
+
+{% block content %}
+    <div class="jumbotron"></div>
+    <div class="container" id="headline">
+            <h1>Prototype</h1>
+            <h4>夢想的雛形，由此開始。</h4>
+    </div>
+    {# bootstrap_messages #}
+<!--    <h2 class="featured"><span class="glyphicon glyphicon-fire"></span>&nbsp最新消息</h2>
+
+<div class="featured metro ">
+    <div class="tile live" data-role="live-tile" data-easing="easeInExpo" style=" width: 60%;height: 600px;margin:10px 0 60px 0;float:left;">
+        <div class="tile-content">
+            <img src="/static/proto_demo/image/Designer/BennyLin/rocket alarm_1.png" height="100%" width="100%">
+        </div>
+        <div class="tile-content">
+            <img src="/static/proto_demo/image/Designer/BennyLin/earplugs_1.png" height="100%" width="100%">
+        </div>
+        <div class="tile-content">
+            <img src="/static/proto_demo/image/Designer/BennyLin/earplugs_2.png" height="100%" width="100%">
+        </div>
+        <div class="tile-content">
+            <img src="/static/proto_demo/image/Designer/BennyLin/apron_1.png" height="100%" width="100%">
+        </div>
+        <div class="tile-status opacity" style="background-color:rgba(255,255,255,0.6);">
+            <p class="label" style="color: #000000">測試</p>
+        </div>
+    </div>
+    <div class="tile live" data-role="live-tile" data-easing="easeInSine"  style="width: 40%;height: 300px;margin:10px 0 0 0;float:left;" >
+        <div class="tile-content">
+            <img src="/static/proto_demo/image/Designer/BennyLin/rocket alarm_2.png" height="100%" width="100%">
+        </div>
+        <div class="tile-content">
+            <img src="/static/proto_demo/image/Designer/BennyLin/rocket alarm_3.png" height="100%" width="100%">
+        </div>
+
+        <div class="tile-status opacity" style="background-color:rgba(255,255,255,0.6);">
+            <p class="label" style="color: #000000">測試</p>
+        </div>
+    </div>
+    <div class="tile live" data-role="live-tile" data-easing="easeInExpo"  style="width: 20%;height: 300px;margin:0 0 60px 0;float:left;" >
+        <div class="tile-content">
+            <img src="/static/proto_demo/image/Designer/BennyLin/eco broom_2.png" height="100%" width="100%">
+        </div>
+        <div class="tile-content">
+            <img src="/static/proto_demo/image/Designer/BennyLin/eco broom_3.png" height="100%" width="100%">
+        </div>
+
+        <div class="tile-status opacity" style="background-color:rgba(255,255,255,0.6);">
+            <p class="label" style="color: #000000">測試</p>
+        </div>
+    </div>
+    <div class="tile live" data-role="live-tile" style="width: 20%;height: 300px;margin:0 0 60px 0;float:left;" >
+        <div class="tile-content">
+            <img src="/static/proto_demo/image/Designer/BennyLin/rocket alarm_4.png" height="100%" width="100%">
+        </div>
+        <div class="tile-content">
+            <img src="/static/proto_demo/image/Designer/BennyLin/eco broom_1.png" height="100%" width="100%">
+        </div>
+
+        <div class="tile-status opacity" style="background-color:rgba(255,255,255,0.6);">
+            <p class="label" style="color: #000000">測試</p>
+        </div>
+    </div>
+
+</div>
+-->
+
+<div class="projects">
+    <div class="container">
+        <div id="project-head">
+            <div class="col-md-12">
+                <h2><i class="glyphicon glyphicon-th"></i>&nbsp&nbspProjects</h2>
+                    <form class="searchbar pull-right">
+                         <input type="text" placeholder=" 尋找項目" style="width: 150px;">
+                         <span>
+                           <i class="glyphicon glyphicon-search"></i>
+                         </span>
+                    </form>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-md-4">
+                    <a class="frame" id="project_1" href="#">
+                        <div class="description">
+                        <h3>Rocket Alarm</h3>
+                        <p>想讓鬧鐘停止嗎?<br>快去找找你的火箭吧!</p>
+                        </div>
+                     </a>
+                </div>
+                <!--在colmd4的底下兩個div 會平分 row的空間 ?!-->
+                <div class="col-md-4">
+                    <a class="frame" id="project_2" href="#">
+                        <div class="description">
+                            <h3>Apron</h3>
+                            <p>....</p>
+                            <p></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a class="frame" id="project_3" href="#">
+                        <div class="description">
+                            <h3>Eco Broom</h3>
+                            <p>....</p>
+                            <p></p>
+                        </div>
+                    </a>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <a class="frame" id="project_4" href="#">
+                    <div class="description">
+                        <h3>Earplugs</h3>
+                        <p>....</p>
+                        <p></p>
+                    </div>
+                </a>
+             </div>
+            <div class="col-md-4">
+                <a class="frame" id="project_5" href="#">
+                    <div class="description">
+                        <h3>Project 5</h3>
+                        <p>....</p>
+                        <p></p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="frame" id="project_6" href="#">
+                    <div class="description">
+                        <h3>Project 6</h3>
+                        <p>....</p>
+                        <p></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="maker">
+    <div class="container">
+        <div id="maker-head">
+            <div class="col-md-12">
+                <h2><i class="fa fa-users"></i>&nbsp&nbspMaker</h2>
+                <form class="searchbar pull-right">
+                    <input type="text" placeholder=" 尋找Maker" style="width: 150px">
+                         <span>
+                           <i class="glyphicon glyphicon-search"></i>
+                         </span>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <a class="frame" id="maker_1" href="#">
+                    <div class="description">
+                        <h3>Benny Lin</h3>
+                        <p>設計師<br>Taipei</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="frame" id="maker_2" href="#">
+                    <div class="description">
+                        <h3>maker 2</h3>
+                        <p>....</p>
+                        <p></p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="frame" id="maker_3" href="#">
+                    <div class="description">
+                        <h3>maker 3</h3>
+                        <p>....</p>
+                        <p></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <a class="frame" id="maker_4" href="#">
+                    <div class="description">
+                        <h3>maker 4</h3>
+                        <p>....</p>
+                        <p></p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="frame" id="maker_5" href="#">
+                    <div class="description">
+                        <h3>maker 5</h3>
+                        <p>....</p>
+                        <p></p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="frame" id="maker_6" href="#">
+                    <div class="description">
+                        <h3>maker 6</h3>
+                        <p>....</p>
+                        <p></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="col-md-4">
+            <h3 class="footer-title">
+                <a href="#">聯繫我們</a>
+            </h3>
+        </div>
+        <div class="col-md-4">
+            <h3 class="footer-title">
+                <a href="#">合作夥伴</a>
+            </h3>
+        </div>
+        <div class="col-md-4">
+            <h3 class="footer-title">
+                <a href="#">智慧財產權政策</a>
+            </h3>
+        </div>
+    </div>
+ </footer>
+{% endblock %}
+
+

@@ -1,0 +1,23 @@
+{% extends 'proto_demo/base.html' %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% block title %}
+        <title>New Maker!</title>
+{% endblock %}
+
+
+{% block content %}
+    <h1>Login to Prototype</h1>
+        <form class="form-horizontal" id="login_form" method="post" action="{% url 'proto_demo:login' %}">
+            {% csrf_token %}
+            {% bootstrap_form login_form layout='horizontal' %}
+            {% buttons layout='horizontal'%}
+                <button type="submit" class="btn btn-primary">
+                {% bootstrap_icon "ok" %} Login
+                </button>
+            {% endbuttons %}
+            <input type="hidden" name="next" value="{{ next }}"/>
+        </form>
+{% endblock %}

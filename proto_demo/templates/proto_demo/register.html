@@ -1,0 +1,50 @@
+{% extends 'proto_demo/base.html' %}
+
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+
+{% block title %}
+        <title>New Maker</title>
+{% endblock %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+    <h1>您已經登入了!無須再註冊</h1>
+    {% else %}
+    {% block register %}
+        <h1 style="color: orangered;text-shadow:1px 1px 2px darkgray">Start with Prototype</h1>
+        {% if registered %}
+            <strong>thank you for registering!</strong>
+            <a href={% url 'proto_demo:home' %}>Return to the homepage.</a><br>
+        {% else %}
+            <form enctype="multipart/form-data" class="form-horizontal" id="user_form" method="post" action={% url 'proto_demo:create_new_maker' %} >
+            {% csrf_token %}
+            {{ profile_form.media }}
+            <!-- Display each form. The as_p method wraps each element in a paragraph
+                 (<p>) element. This ensures each element appears on a new line,
+                 making everything look neater. -->
+            {% bootstrap_field profile_form.profile_pic layout="horizontal"%}
+            {% bootstrap_form user_form layout="horizontal"%}
+            {% bootstrap_field profile_form.maker_major layout="horizontal"%}
+            {% bootstrap_field profile_form.maker_other_major layout="horizontal"%}
+            {% bootstrap_field profile_form.maker_bonus_offer layout="horizontal"%}
+            {% bootstrap_field profile_form.maker_related_category layout="horizontal"%}
+            {% bootstrap_field profile_form.maker_detail layout="horizontal"%}
+            <!-- Provide a button to click to submit the form. -->
+            {% buttons layout='horizontal'%}
+                <button type="submit" class="btn btn-primary">
+                {% bootstrap_icon "ok" %} Submit
+                </button>
+            {% endbuttons %}
+            </form>
+        {% endif %}
+    {% endblock %}
+    {% endif %}
+{% endblock %}
+
+
+
+
+

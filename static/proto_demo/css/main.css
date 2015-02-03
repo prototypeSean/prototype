@@ -1,0 +1,267 @@
+
+body{
+    left: 0;
+    margin: 0;
+    position: relative;
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%)
+    /*background:url('/static/proto_demo/image/dark-wood-panels.jpg');*/
+    z-index: 10;
+}
+
+.nav{
+    padding-top: 3px;
+    background: linear-gradient(to left top, rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%);
+}
+
+.nav ul{
+    margin-bottom: 0;
+}
+
+#logo{
+    color: #ffffff;
+    font-family: "FangSong";
+    font-size: 26px;
+    font-weight: bold;
+    line-height:40px;
+    text-shadow:1px 1px 2px rgb(255, 112, 0);
+}
+
+.nav a {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration-color: #808080;
+    padding-right: 20px;
+    line-height:35px;
+}
+
+.nav a:hover{
+    text-decoration: none;
+    text-shadow: 1px 1px 3px rgb(225, 43, 0);
+}
+
+.learnmore span{
+    font-family: "FangSong";
+    font-size:16px;
+    display: none;
+
+}
+
+.nav li {
+    display: inline;
+}
+
+.blur {
+	    -webkit-filter: blur(1px); /* Chrome, Opera */
+	       -moz-filter: blur(1px);
+	        -ms-filter: blur(1px);
+	            filter: blur(1px);
+	}
+/*沒用到的物化濾鏡,先放著*/
+
+.jumbotron {
+    position: absolute;
+    height: 400px;
+    width: 100%;
+    background: url('/static/proto_demo/image/hptmp.JPG') no-repeat;
+    background-size: cover;
+    margin-bottom: 5px;
+    z-index: -1;
+}
+
+#headline {
+    position: relative;
+    margin-top:150px;
+    margin-bottom: 160px;
+}
+
+#headline h1 {
+    color: #8F0222;
+    font-size: 50px;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    text-shadow:2px 2px 4px #ffffff;
+}
+
+#headline h4 {
+    font-family: "FangSong";
+    color: #ffffff;
+    text-shadow:2px 2px 4px rgba(199,34,0,0.8) ;
+}
+
+.row{
+    margin-bottom: 35px;
+    height: 300px;
+}
+
+
+.featured {
+    font-family: "Microsoft JhengHei";
+    color: rgb(245, 70, 0);
+    text-shadow:1px 1px 3px #696969;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+    background-color: transparent;
+}
+
+.searchbar input{
+    border-radius: 30px;
+    vertical-align: bottom;
+    font-family: "Microsoft JhengHei";
+}
+
+.projects {
+    background-color: transparent;
+    margin-bottom:60px ;
+}
+
+.maker {
+    background-color: transparent;
+    margin-bottom:60px ;
+}
+
+#project-head{
+    margin-top: 15px;
+    height: 50px;
+}
+
+#maker-head{
+    margin-top: 15px;
+    height: 50px;
+}
+
+#project-head span{
+    font-size: 20px;
+}
+
+#maker-head span{
+    font-size: 20px;
+}
+
+#maker-head{
+    margin-bottom: 5px;
+}
+
+#project-head *{
+    display: inline;
+}
+#maker-head *{
+    display: inline;
+}
+.projects p{
+    font-family: "Microsoft JhengHei";
+}
+.maker p{
+    font-family: "Microsoft JhengHei";
+}
+.projects h2{
+    color: rgba(169,3,41,1);
+    text-shadow:1px 1px 1px #464646;}
+
+.maker h2{
+    color: rgba(169,3,41,1);
+    text-shadow:1px 1px 1px #464646;}
+
+
+.projects i{
+    vertical-align: bottom;
+    color: rgba(169,3,41,1);
+
+}
+
+.maker i{
+    vertical-align: bottom;
+    color: rgba(169,3,41,1);
+
+}
+
+.projects span:focus{
+
+}
+
+.frame{
+    padding-top:94px;
+    height: 300px;
+    text-align: right;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    box-shadow: 1px 1px 3px rgba(109,0,25,1);
+    border: 2px solid rgb(207, 38, 0);
+    background-size:cover ;
+    width: 80%;
+    position: absolute;
+}
+
+
+.description {
+    padding:2px 10px 0 0;
+    background-color: rgba(248,248,255,0.5);
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    border-radius: 12px;
+    bottom: 0px;
+    display: none;
+}
+
+
+.frame:hover{
+    box-shadow:1px 1px 10px rgb(245, 70, 0);
+}
+
+
+#project_1{
+    background-image:url('/static/proto_demo/image/designer/bennylin/rocket%20alarm_1.png');
+}
+
+#project_2{
+    background-image: url('/static/proto_demo/image/designer/bennylin/apron_1.png');
+}
+
+#project_3{
+    background-image: url('/static/proto_demo/image/designer/bennylin/eco%20broom_2.png');
+}
+
+#project_4{
+    background-image: url('/static/proto_demo/image/designer/bennylin/earplugs_1.png');
+}
+
+#project_5{
+    background-image: url('');
+}
+
+#project_6{
+    background-image: url('');
+}
+
+.projects h3 {
+    font-family: 'Poiret One', cursive;
+    font-size: 24px;
+    text-align: right;
+}
+
+.projects a {
+    color:#4C0000;
+}
+
+.projects a:hover{
+    text-decoration: none;
+    text-shadow: 0 0 10px #4C0000;
+}
+
+footer{
+    background: linear-gradient(to right bottom, rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%);
+    font-family: "Microsoft JhengHei";
+    text-align: center;
+}
+
+.footer-title a{
+    font-family: "FangSong";
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.hidden_major{
+    color: rgba(0, 0, 0,0.5);
+}

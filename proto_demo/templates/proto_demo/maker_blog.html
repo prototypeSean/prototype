@@ -1,0 +1,220 @@
+{% extends 'proto_demo/bootstrap.html' %}
+{% load staticfiles %}
+{% load url from future %}
+{% load bootstrap3 %}
+
+{% block bootstrap3_extra_head %}
+
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+    <link href="/static/proto_demo/css/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/static/proto_demo/css/makerblog.css" rel="stylesheet" >
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <script src="/static/proto_demo/js/main.js"></script>
+
+{% endblock %}
+
+{% block bootstrap3_content %}
+    {% block nav %}
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" style="color: rgb(255, 255, 255);font-family: fangsong">&nbsp&nbsp&nbsp;丹尼斯</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+            </ul>
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>&nbsp;&nbsp;
+                <button type="submit" class="btn btn-default" title="search">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>&nbsp;&nbsp;
+                <button class="btn btn-default" type="button" title="message">
+                    <span class="glyphicon glyphicon-envelope"></span>
+                </button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Profile</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+    {% endblock %}
+
+    {% block contant %}
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div>
+            <div class="carousel-inner jumbo">
+                <div class="item active">
+                    <img src="/static/proto_demo/image/startpage/startbg.jpg" alt="...">
+                    <div class="carousel-caption">
+                        ...
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/static/proto_demo/image/startpage/startbg.jpg" alt="...">
+                    <div class="carousel-caption">
+                        ...
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/static/proto_demo/image/startpage/startbg.jpg" alt="...">
+                    <div class="carousel-caption">
+                        ...
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+    </div>
+
+    <div class="container">
+        <h2 class="title">
+            <i class="glyphicon glyphicon-th"></i> 歷來項目
+        </h2>
+    </div>
+    <div id="carousel-thumbnail-generic" class="carousel slide " data-ride="carousel">
+        <!-- Indicators -->
+        <div class="dots">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-thumbnail-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-thumbnail-generic" data-slide-to="1" ></li>
+            <li data-target="#carousel-thumbnail-generic" data-slide-to="2" ></li>
+        </ol>
+        </div>
+        <!-- Wrapper for slides -->
+        <div class="container">
+        <div class="carousel-inner projects">
+                <div class="item active ">
+                    <div class="col-sm-6 col-md-4 thumbnail">
+                        <div class="inthumbnail">
+                        <img data-src="holder.js/300x300" src="/static/proto_demo/image/designer/bennylin/rocket alarm_1.png" alt="">
+                        <div class="caption description">
+                            <h3>參與項目１</h3>
+                            <p>這裡用來寫簡介..</p>
+                            <p>
+                            <a href="#" class="btn btn-primary" role="button"><i class="glyphicon glyphicon-share-alt"></i> Share</a>
+                                <a href="#" class="btn btn-success" role="button"><i class="glyphicon glyphicon-eye-open"></i> More&nbsp</a>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 thumbnail">
+                        <div class="inthumbnail">
+                        <img data-src="holder.js/300x300" src="/static/proto_demo/image/designer/bennylin/rocket alarm_1.png" alt="">
+                        <div class="caption description">
+                            <h3>參與項目２</h3>
+                            <p>這裡用來寫簡介..</p>
+                            <p>
+                            <a href="#" class="btn btn-primary" role="button"><i class="glyphicon glyphicon-share-alt"></i> Share</a>
+                                <a href="#" class="btn btn-success" role="button"><i class="glyphicon glyphicon-eye-open"></i> More&nbsp</a>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 thumbnail">
+                        <div class="inthumbnail">
+                            <img data-src="holder.js/300x300" src="/static/proto_demo/image/designer/bennylin/rocket alarm_1.png" alt="">
+                            <div class="caption description">
+                                <h3>參與項目３</h3>
+                                <p>這裡用來寫簡介..</p>
+                                <p>
+                                <a href="#" class="btn btn-primary" role="button"><i class="glyphicon glyphicon-share-alt"></i> Share</a>
+                                    <a href="#" class="btn btn-success" role="button"><i class="glyphicon glyphicon-eye-open"></i> More&nbsp</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="col-sm-6 col-md-4 thumbnail">
+                        <div class="inthumbnail">
+                        <img data-src="holder.js/300x300" src="/static/proto_demo/image/designer/bennylin/rocket alarm_1.png" alt="">
+                        <div class="caption description">
+                            <h3>參與項目２</h3>
+                            <p>這裡用來寫簡介..</p>
+                            <p>
+                                <a href="#" class="btn btn-primary" role="button"><i class="glyphicon glyphicon-share-alt"></i> Share</a>
+                                <a href="#" class="btn btn-success" role="button"><i class="glyphicon glyphicon-eye-open"></i> More&nbsp</a>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 thumbnail">
+                        <div class="inthumbnail">
+                        <img data-src="holder.js/300x300" src="/static/proto_demo/image/designer/bennylin/rocket alarm_1.png" alt="">
+                        <div class="caption description">
+                            <h3>參與項目２</h3>
+                            <p>這裡用來寫簡介..</p>
+                            <p>
+                                <a href="#" class="btn btn-primary" role="button"><i class="glyphicon glyphicon-share-alt"></i> Share</a>
+                                <a href="#" class="btn btn-success" role="button"><i class="glyphicon glyphicon-eye-open"></i> More&nbsp</a>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 thumbnail">
+                        <div class="inthumbnail">
+                            <img data-src="holder.js/300x300" src="/static/proto_demo/image/designer/bennylin/rocket alarm_1.png" alt="">
+                            <div class="caption description">
+                                <h3>參與項目３</h3>
+                                <p>這裡用來寫簡介..</p>
+                                <p>
+                                    <a href="#" class="btn btn-primary" role="button"><i class="glyphicon glyphicon-share-alt"></i> Share</a>
+                                    <a href="#" class="btn btn-success" role="button"><i class="glyphicon glyphicon-eye-open"></i> More&nbsp</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-thumbnail-generic" role="button" data-slide="prev" >
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-thumbnail-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+    {% endblock %}
+
+{% endblock %}

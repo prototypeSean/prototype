@@ -1,0 +1,53 @@
+{% extends 'proto_demo/base.html' %}
+{% load bootstrap3 %}
+{% load staticfiles %}
+
+{# 繼承的block 不要把他呼叫出來才不會被覆蓋  #}
+{{% block title %}
+    Prototype
+{% endblock %}
+
+{% block content %}
+<div class="container">
+<h1>{{ project.project_name }}</h1><br>
+
+<h3>項目擁有者</h3>
+{% for user in project.project_starter.all %}
+    {{ user }}<br>
+{% endfor %}<br>
+
+{% if request.user in project.project_starter.all%}
+
+
+<h3>需求領域</h3>
+{% for major in project.project_request_major.all %}
+    {{ major }}<br>
+{% endfor %}
+<br>
+
+<h3>配對結果</h3>
+<br>
+
+{% for maker in result %}                   <!--用for帶出每個maker-->
+    <dl>
+    <dt>{{ maker }}</dt>                    <!--輸出maker名子-->
+    {% for m_j in maker.maker_major.all %}  <!--用第二個for"逐一帶出"當下"maker中的maker_major欄位裡面所有物件-->
+        {% if m_j in p_request_major %}     <!--如果當下的maker_majro有包含在p_request_major裡面就顯示-->
+            <dd>{{ m_j }}</dd>
+            {% else %}                      <!--如果沒有包含在p_request_major裡面就不顯示-->
+            <dd class="hidden_major">{{ m_j }}</dd>
+        {% endif %}
+    {% endfor %}<br>
+    </dl>
+{% endfor %}
+
+<br><br>
+
+<p>日期<br>{{ project.pub_date }}<br>
+</p>
+
+{% endif %}
+</div>
+
+
+{% endblock %}

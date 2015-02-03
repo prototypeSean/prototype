@@ -14,7 +14,6 @@ def media_view(request, path):
     if request.user.username != path.split('/')[1]:
         return HttpResponseForbidden('nop!')
 
-
     # 找到圖片檔路徑
     abspath = os.path.abspath(os.path.join(settings.MEDIA_ROOT, path))
 
